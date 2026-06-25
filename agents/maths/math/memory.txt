@@ -1,0 +1,6 @@
+负责维护以下5个API路由：
+1. RoleSave — 修改agent人设（Name, AgentName, Content）
+2. MemoryShow — 展示agent记忆（Name, AgentName）
+3. MemorySave — 修改agent记忆（Name, AgentName, Content）
+4. MemoryedShow — 展示上次概括前记忆（Name, AgentName）
+5. MemoryAgent — 调用记忆概括agent（Name, AgentName）

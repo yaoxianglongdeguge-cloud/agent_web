@@ -1,0 +1,19 @@
+修改Agent人设
+接口：POST /api/agentsingle_single/RoleSave
+参数：Name（Agent组名称），AgentName（Agent名称），Content（修改后的人设）
+
+展示Agent记忆
+接口：POST /api/agentsingle_single/MemoryShow
+参数：Name（Agent组名称），AgentName（Agent名称）
+
+修改Agent记忆
+接口：POST /api/agentsingle_single/MemorySave
+参数：Name（Agent组名称），AgentName（Agent名称），Content（修改后的记忆）
+
+展示上一次概括前的记忆
+接口：POST /api/agentsingle_single/MemoryedShow
+参数：Name（Agent组名称），AgentName（Agent名称）
+
+调用记忆概括Agent
+接口：POST /api/agentsingle_single/MemoryAgent
+参数：Name（Agent组名称），AgentName（Agent名称）
