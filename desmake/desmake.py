@@ -4,16 +4,20 @@ import importlib
 import importlib.util
 import sys
 
-stay_dir=Path(__file__).parent.parent.parent
-myname=stay_dir.name
-current_dir=stay_dir.parent
+agents=sys.argv[1]
+myname=sys.argv[2]
+action=sys.argv[3]
+tool=sys.argv[4]
+
+current_dir=Path(__file__).parent.parent/"agents"/agents
 sys.path.insert(0, str(current_dir))
+
 
 from port import desmake_port
 
 if __name__=="__main__":
-    
-    desmake_port.tools_make(myname)
+  
+   desmake_port.tools_make(myname,action,tool)
 
 
    
