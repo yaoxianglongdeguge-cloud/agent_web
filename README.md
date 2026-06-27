@@ -1,10 +1,13 @@
 # Agent 开发框架设计文档
 
+
 ## 核心架构
 
 # Agent IDE 项目结构
 
 ## 根目录
+
+```
 
 agent_exploit/
 ├── README.md
@@ -72,6 +75,8 @@ agent_frame/
     └── port/
         ├── desmake_port.py      # 工具注册接口
         └── memory_port.py       # 记忆概括接口
+
+```
 
 
 ## 三大核心类
