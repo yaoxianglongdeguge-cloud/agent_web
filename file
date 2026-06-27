@@ -1,0 +1,70 @@
+# Agent IDE 项目结构
+
+## 根目录
+
+agent_exploit/
+├── README.md
+├── agents/
+│   └── agents_login.json          # Agent 组注册表
+├── desmake/                        # 🔧 工具暂存区
+│   ├── desmake.py                  # 工具注册程序
+│   └── add/
+│       └── ++main++.py             # 待注册工具示例
+└── server/                         # 🌐 Go Web 服务器
+    ├── first.go                    # 入口
+    ├── go.mod / go.sum
+    ├── router/
+    │   └── router.go               # 路由注册
+    └── web_handle_func/            # 页面 & 处理函数
+        ├── web_handle_func.go      # 路由处理函数
+        ├── HomePage.html           # 首页
+        ├── OperatePage.html        # 组管理页面
+        ├── OperatePage_single.html # 组内操作页面
+        ├── OperatePage_single_single.html # 单个Agent页面
+        └── AgentCorresspondPage.html     # 通信页面
+
+
+## 🐍 Python Agent 框架 (agent_frame/)
+
+agent_frame/
+├── agent_login.json             # Agent 注册表
+├── agent_queue.py               # 共享消息队列
+├── call_stucture.json           # 消息打包结构规范
+├── generate.py                  # Agent 生成程序
+├── main.py                      # 主通信程序（预热所有Agent）
+│
+├── 🔧 三大核心类
+├── ai_clone_class/
+│   ├── ai_clone.py              # Agent 主体类
+│   ├── ai_des.py                # 工具描述类
+│   └── ai_tools.py              # 工具类
+│
+├── 🏭 生成模块
+├── ai_generate/
+│   ├── ai_generate.py           # 新Agent生成接口
+│   └── new_ai/                  # Agent 模板
+│       ├── ai_self.py
+│       ├── memory.py / memory.txt / memoryed.txt
+│       ├── role.txt
+│       └── ai_tools/
+│           ├── des/             # 工具描述文件夹
+│           └── tools/           # 工具文件夹
+│               └── 工具名/
+│                   └── ++main++ # ⚡ 工具唯一入口
+│
+├── 🧠 记忆概括 Agent
+├── memory_ai/
+│   ├── ai_self.py / memory.py / role.txt ...
+│   └── ai_tools/tools/megeneral/
+│       └── ++main++.py
+│
+├── 📝 工具描述 Agent
+├── tools_make_ai/
+│   ├── ai_self.py / role.txt ...
+│   └── ai_tools/tools/tools_make/
+│       └── ++main++.py
+│
+└── 📡 接口层
+    └── port/
+        ├── desmake_port.py      # 工具注册接口
+        └── memory_port.py       # 记忆概括接口
