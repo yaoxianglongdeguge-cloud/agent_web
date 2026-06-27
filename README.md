@@ -3,11 +3,10 @@
 
 ## 核心架构
 
-# Agent IDE 项目结构
-
+```
 ## 根目录
 
-```
+# Agent IDE 项目结构
 
 agent_exploit/
 ├── README.md
